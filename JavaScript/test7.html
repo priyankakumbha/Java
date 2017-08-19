@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form name ="test">
+    Adress : <textarea name="address" rows="5 cols="20></textarea> </br>
+    <input type="submit" value="submit" onclick="return validateForm()" />
+  </form>
+
+  <script>
+  function validateLogin()
+  {
+    var f1 = document.myForm;
+    var un = f1.username;
+    if(un.value.length == 0)
+    {
+      alert("please enetr username");
+      un.focus();
+      return false;
+    }
+    var pw = f1.password;
+    if(pw.value.length == 0)
+    {
+      alert("please enetr password");
+      pw.focus();
+      return false;
+    }
+  }
+</script>
+</body>
+</html>

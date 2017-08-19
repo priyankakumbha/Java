@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="title">Hello, user</div>
+  <form>
+    First Name : <input type="text" name="firstName"/></br>
+    Gender:
+    <input type="radio" name="gender" value="m" onclick="generateTitle()"/>
+    Male
+    <input type="radio" name="gender" value="f" onclick="generateTitle()"/>
+    FeMale </br>
+    ...... </br>
+    ...... </br>
+    ...... </br>
+    ...... </br>
+    ...... </br>
+    <input type="submit" value="submit"/>
+  </form>
+  <script>
+  function generateTitle()
+  {
+    var f1 = document.forms[0];
+    var fn = f1.firstName.value;
+    var g1 = f1.gender.value;
+    var title = "";
+    if(g1 == "m")
+    {
+      title = "Hello Mr. " + fn;
+    }
+    else {
+      title = "Hello, Mrs. " + fn;
+    }
+    document.getElementById("title").innerHTML = title;
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form name ="test">
+    Gender : <input type="radio" name="gender" value="m" /> Male &nbsp;
+     <input type="radio" name="gender" value="f" /> Female </br>
+      <input type="submit" value="submit" onclick="return validate()" />
+  </form>
+
+  <script>
+  function validate()
+  {
+    var f1 = document.test;
+    var g1 = f1.gender;
+    var flag = true;
+    for(var i=0; i < g1.length ; i++){
+      if(g1[i].checked)
+      {
+        flag = false;
+        break;
+      }
+    }
+    if(flag)
+    {
+      alert("please select gender");
+      g1[0].focus();
+      return false;
+    }
+  }
+</script>
+</body>
+</html>

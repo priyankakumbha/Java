@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <table>
+      <tr>
+        <td>
+          <select name="allOptions" multiple>
+            <option value='1'>ONE</option>
+              <option value='2'>TWO</option>
+                <option value='3'>THREE</option>
+                  <option value='4'>FOUR</option>
+                </select>
+              </td>
+              <td>
+                <input type='button' value='>>>' onclick='transfer()'/>
+              </td>
+              <td>
+                <select name="selectedOptions" multiple>
+                </select>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <script>
+  function transfer()
+  {
+    var f1 = document.forms[0];
+    var src = f1.allOptions;
+    var dest = f1.selectedOptions;
+    var srcOptions = src.options;
+    for(var i= 0; i < srcOptions.length; i++)
+    {
+      if(srcOptions[i].selected)
+      {
+        // text = srcOptions[i].text;
+        // value = srcOptions[i].value;
+        // option = new Option(text, value);
+        dest.options[dest.options.length] = srcOptions[i];
+        srcOptions[i] = null;
+      }
+    }
+  }
+  </script>
+</body>
+</html>

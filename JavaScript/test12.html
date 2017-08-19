@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+		First Name : <input type="text" name="firstName"/> </br>
+		Last Name : <input type="text" name="lastName"/> </br>
+		<input type="submit" onclick="return validate()"/>
+	</form>
+  <script>
+	function validate()
+	{
+		var f1 = document.forms[0];
+		var fName = f1.firstName;
+		if(fName.value.length == 0)
+		{
+			alert("pls enter first name");
+			fName.focus();
+			return false;
+		}
+		if(fName.value.length <= 2)
+		{
+			alert("first name should be min 3 characters");
+			fName.select();
+			return false;
+		}
+		if(fName.value.length > 20)
+		{
+			alert("first name can be max 20 characters");
+			fName.select();
+			return false;
+		}
+		var lName = f1.lastName;
+		if(lName.value.length == 0)
+		{
+			alert("pls enter last name");
+			lName.focus();
+			return false;
+		}
+		if(lName.value.length <= 2)
+		{
+			alert("last name should be min 3 chars");
+			lName.select();
+			return false;
+		}
+		if(lName.value.length > 20)
+		{
+			alert("last name can be max 20 chars");
+			lName.select();
+			return false;
+		}
+
+	}
+</script>
+
+</body>
+</html>
