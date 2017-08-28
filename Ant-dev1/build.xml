@@ -1,0 +1,6 @@
+<project default="run">
+<target name="run">
+  <javac srcdir="src" destdir="classes"/>
+  <java classpath="classes" classname="B"/>
+</target>
+</project>
