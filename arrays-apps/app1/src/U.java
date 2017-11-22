@@ -11,6 +11,7 @@ class U
     int size = x.length > y.length ? y.length : x.length;
     int[] z = new int[size];
     boolean flag = false;
+    int found = 0;
     for(int i = 0; i < x.length; i++)
     {
       for(int j = 0; j < y.length; j++)
@@ -23,7 +24,19 @@ class U
       }
       if(flag)
       {
+        boolean availability = false;
+        for(int k = 0; k< found; k++)
+        {
+          if(x[i] == z[k])
+          {
+            availability = true;
+            break;
+          }
+        }
+        if(!availability)
+        {
         z[found ++] = x[i];
+        }
       }
       flag = false;
     }
