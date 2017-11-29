@@ -1,0 +1,7 @@
+interface C
+{
+  void test()
+  {
+    
+  }
+}

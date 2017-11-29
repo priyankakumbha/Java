@@ -1,0 +1,14 @@
+interface D
+{
+  D()
+  {
+
+  }
+  static
+  {
+
+  }
+  {
+    
+  }
+}
