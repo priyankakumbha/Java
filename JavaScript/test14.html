@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+	Skills: <input type="checkbox" name="skill" value="c"/> C &nbsp;
+	Skills: <input type="checkbox" name="skill" value="c++"/> C++ &nbsp;
+	Skills: <input type="checkbox" name="skill" value="j"/> Java &nbsp;
+	Skills: <input type="checkbox" name="skill" value="orcl"/> Oracle <br> <input type="button" value="submit" onclick="readCheckedSkills()"/>
+</form>
+<script>
+	function readCheckedSkills()
+	{
+		var f1 = document.forms[0];
+		var skills = f1.skill;
+		for(var i = 0; i < skills.length; i++)
+		{
+			if(skills[i].checked)
+			{
+				alert(skills[i].value);
+			}
+		}
+	}
+</script>
+</body>
+</html>

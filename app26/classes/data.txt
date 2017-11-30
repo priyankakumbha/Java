@@ -1,0 +1,6 @@
+101;Vijay;50
+102;Kiran;40
+103;Teja;30
+104;Kiran;25
+105;Murali;40
+106;Manoj;45

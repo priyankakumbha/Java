@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    State : <select name="state" onchange="populateDistricts()">
+      <option value="0"> SELECT </option>
+      <option value="1"> KARNATAKA </option>
+      <option value="2"> ANDHRA </option>
+      <option value="3"> TELANGANA </option>
+      <option value="4"> TAMILNADU </option>
+    </select></br>
+    <div id="districtsDiv">District : <select name="district" onclick="checkStateSelection()">
+    <option value ="0">SELECT STATE</option>
+    </select>
+  </div>
+    ......</br>
+    ......</br>
+    ......</br>
+    ......</br>
+  </form>
+  <script>
+  function checkStateSelection()
+  {
+    var myForm = document.forms[0];
+    var myState = myForm.state;
+    if(myState.value == "0")
+    {
+      alert("Please select state first");
+      myState.focus();
+    }
+  }
+  function populateDistricts()
+  {
+    var d1 = "District: <select name='district' "+
+    "onclick = 'checkStateSelection()'>" +
+    "<option value='0'>SELECT STATE</option>"
+    var myForm = document.forms[0];
+    var myState = myForm.state;
+    if(myState.value == "1")
+    {
+      d1 += "<option value='1'>Bangalore</option>";
+      d1 += "<option value='2'>Mysore</option>";
+      d1 += "<option value='3'>Ballary</option>";
+
+    }
+    if(myState.value == "2")
+    {
+      d1 += "<option value='4'>Vijaywada</option>";
+      d1 += "<option value='5'>Kadapa</option>";
+      d1 += "<option value='6'>Chittor</option>";
+
+    }
+
+    if(myState.value == "3")
+    {
+      d1 += "<option value='7'>Hydrabad</option>";
+      d1 += "<option value='8'>Nalgonda</option>";
+      d1 += "<option value='9'>Rangareaddy</option>";
+    }
+    d1 += "</select>";
+document.getElementById("districtsDiv").innerHTML = d1;
+  }
+  </script>
+</body>
+</html>

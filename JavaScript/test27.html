@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var data = new Array();
+  function populateArray()
+  {
+    for(var i= 0; i< 10; i++){
+      data[data.length] = i * 10;
+    }
+  }
+  function printArray()
+  {
+    for(var i= 0; i< data.length; i++){
+      alert(data[i]);
+    }
+  }
+  function removeArrayContent()
+  {
+  data.splice(0, data.length);
+  }
+  </script>
+  <input type="button" value="populate array content" onclick="populateArray()" />
+    <input type="button" value="print array content" onclick="printArray()" />
+    <input type="button" value="remove array content" onclick="removeArrayContent()" />
+</body>
+</html>
