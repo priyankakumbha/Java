@@ -1,0 +1,1 @@
+class G{     public static void main(String[] args)     {          System.out.print(true);          System.out.print(false);          System.out.print(100);          System.out.print('s');          System.out.print('%');      }}

@@ -1,0 +1,1 @@
+class Z18{     public static void main(String[] args)     {          double i = 9.9;          System.out.println(i);          double i = 99.9;          System.out.println(i);          double i = 999.9;          System.out.println(i);      }}

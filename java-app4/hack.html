@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+   google.charts.load('current', {
+        'packages': ['corechart']
+      });
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+      function drawSeriesChart() {
+
+        var data = google.visualization.arrayToDataTable([
+
+          ['Region', 'Average Rent', 'Monthly Change', 'Annually Change'],
+          ['Ashfield', 368, -0.7, 2.1],
+          ['Botany Bay', 510, 4.1, 2.0],
+          ['Lane Cove', 495, 2.6, 5.3],
+          ['Leichhardt', 420, 0.0, -4.5],
+          ['Marrickville', 400, 5.3, 5.3],
+          ['Mosman', 450, 0.0, 0.0],
+          ['North Sydney', 480, -2.0, 0.0],
+          ['Randwick', 485, -1.0, 5.4],
+          ['Sydney', 530, 1.9, 0.0],
+          ['Waverley', 510, -2.9, 2.0],
+          ['Woollahra', 480, -2.0, -1.0],
+          ['Auburn', 435, 2.4, 6.1],
+          ['Bankstown', 270, -1.8, 3.8],
+          ['Burwood', 425, 3.7, 9.0],
+          ['Canterbury', 300, -6.3, 1.7],
+          ['Canada Bay', 500, -2.0, 3.6],
+          ['Hurstville', 390, 4.0, -2.5],
+        ]);
+
+        var options = {
+          title: 'Correlation between Average Rent and Region',
+          hAxis: {
+            title: 'Region'
+          },
+          vAxis: {
+            title: 'Average Rent'
+          },
+          bubble: {
+            textStyle: {
+              fontSize: 11
+            }
+          },
+          colorAxis: {
+            colors: ['yellow', 'red', 'green', 'pink', 'blue', 'orange', 'red']
+          }
+        };
+
+
+        var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+        chart.draw(data, options);
+      }
+ </script>
+<div id="series_chart_div" style="width: 900px; height: 500px;"></div>
+</body>
+</html>

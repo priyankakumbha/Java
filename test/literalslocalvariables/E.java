@@ -1,0 +1,1 @@
+class E{     public static void main(String[] args)     {          int x,y,z,r = 99;          x=10;          y = z = 55;          System.out.println(x);          System.out.println(y);          System.out.println(z);          System.out.println(r);      }}
